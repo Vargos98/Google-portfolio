@@ -32,6 +32,7 @@ const Hero = () => {
           className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 rounded-full object-cover -mt-32 animate-image border-4  border-white  cursor-pointer hover:border-4 hover:border-gray-400 " // Added animation class
           src={profie}
           
+          
           alt="Umesh Kumar"
         />
         <h1 className='text-4xl text-white font-semibold'>Umesh Kumar</h1>
