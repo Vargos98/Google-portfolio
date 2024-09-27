@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import profie from '../Assets/umesh.jpg';
+import './Hero.css'; // Import the CSS file for animations
 
 const Hero = () => {
   const [placeholder, setPlaceholder] = useState('Search Google or type a URL');
@@ -19,7 +20,7 @@ const Hero = () => {
       // Cycle through the placeholder options
       currentIndex = (currentIndex + 1) % placeholderOptions.length;
       setPlaceholder(placeholderOptions[currentIndex]);
-    }, 3000); // Change every 2 seconds
+    }, 3000); // Change every 3 seconds
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []); // Empty dependency array ensures this runs once on mount
@@ -28,15 +29,16 @@ const Hero = () => {
     <div className='bg-main-bg w-full h-screen'>
       <div className='flex items-center flex-col gap-5 justify-center h-full'>
         <img
-          className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 rounded-full object-cover -mt-32"
+          className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64 rounded-full object-cover -mt-32 animate-image border-4  border-white  cursor-pointer hover:border-4 hover:border-gray-400 " // Added animation class
           src={profie}
+          
           alt="Umesh Kumar"
         />
         <h1 className='text-4xl text-white font-semibold'>Umesh Kumar</h1>
-        <div className="relative w-full max-w-md">
+        <div className="relative w-full max-w-xl">
           <input
             type="text"
-            className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none focus:border-blue-400"
+            className="w-full py-2 pl-10 pr-4 text-gray-800 bg-white border border-gray-300 rounded-full shadow-sm focus:ring-2 focus:ring-blue-400 focus:outline-none focus:border-blue-400"
             placeholder={placeholder} // Dynamic placeholder
           />
           <div className="absolute inset-y-0 left-0 flex items-center pl-3">

@@ -1,0 +1,17 @@
+/* CSS for the profile image animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Starts 50px above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at original position */
+  }
+}
+
+.animate-image {
+  animation: fadeInDown 1s ; /* 1.5 second animation */
+}
+
+

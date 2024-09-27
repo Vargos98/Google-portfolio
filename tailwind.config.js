@@ -10,6 +10,7 @@ module.exports = {
         'main-bg': "url('./Assets/background/mainBg.jpg')",
         
       }
+      
     },
   },
   plugins: [],
